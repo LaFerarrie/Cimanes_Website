@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobbies - Jose Jamiel R. Cimanes</title>
+    <meta name="description" content="Hobbies and interests of Jose Jamiel R. Cimanes" />
+    <meta name="author" content="Jose Jamiel R. Cimanes" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Function to show hobby details
+        function showHobbyDetails(hobbyId) {
+          // Hide all hobby content first
+          document.querySelectorAll('.hobby-content').forEach(function(content) {
+            content.style.display = 'none';
+          });
+          
+          // Show selected hobby content
+          document.getElementById(hobbyId + '-content').style.display = 'block';
+          
+          // Update active state for cards
+          document.querySelectorAll('.hobby-card').forEach(function(card) {
+            card.classList.remove('border-f1-red');
+          });
+          document.getElementById(hobbyId + '-card').classList.add('border-f1-red');
+        }
+        
+        // Set click handlers for hobby cards
+        document.querySelectorAll('.hobby-card').forEach(function(card) {
+          card.addEventListener('click', function() {
+            const hobbyId = this.getAttribute('data-hobby-id');
+            showHobbyDetails(hobbyId);
+          });
+        });
+        
+        // Check for hash in URL to show specific hobby
+        const hash = window.location.hash.substring(1);
+        if (['drums', 'racing', 'archery'].includes(hash)) {
+          showHobbyDetails(hash);
+        } else {
+          // Default to first hobby
+          showHobbyDetails('drums');
+        }
+      });
+    </script>
+  </head>
+
+  <body class="bg-f1-black text-f1-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-f1-black border-b border-f1-darkGray z-50">
+      <div class="f1-container py-4">
+        <div class="flex justify-between items-center">
+          <a href="index.html" class="text-f1-red font-bold text-2xl flex items-center">
+            <span class="text-f1-white mr-1">Jose</span>
+            CIMANES
+          </a>
+          
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="hobbies.html" class="nav-link active">Hobbies</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+          
+          <div class="md:hidden">
+            <button class="text-f1-white p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen">
+      <div class="pt-16">
+        <section class="relative py-20 flex items-center bg-f1-black">
+          <div class="absolute inset-0 bg-gradient-to-b from-f1-black via-f1-black/90 to-f1-black/80 z-10"></div>
+          <div 
+            class="absolute inset-0 bg-cover bg-center opacity-30"
+            style="background-image: url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1974');"
+          ></div>
+          <div class="f1-container relative z-20">
+            <div class="max-w-4xl">
+              <div class="animate-slide-in-left">
+                <h1 class="f1-header mb-6">
+                  <span class="text-f1-white">MY</span> HOBBIES
+                </h1>
+                <div class="h-1 w-24 bg-f1-red mb-8 animate-reveal origin-left"></div>
+                <p class="text-lg md:text-xl text-f1-lightGray mb-4 max-w-2xl animate-slide-in-left delay-100">
+                  Like Formula 1 drivers who balance racing with other interests, 
+                  I pursue various hobbies that challenge me and fuel my passion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-16 bg-f1-darkGray">
+          <div class="f1-container">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <!-- Drums Card -->
+              <div id="drums-card" class="f1-card cursor-pointer transition-all duration-300 overflow-hidden border-f1-red hobby-card" data-hobby-id="drums">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?q=80&w=2070" 
+                    alt="Drums" 
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 flex items-center">
+                    <div class="bg-f1-red p-2 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                        <path d="M12 3v10"></path>
+                        <path d="M12 19v2"></path>
+                        <path d="M21 13h-9"></path>
+                        <path d="m12 8-2 2"></path>
+                        <path d="m12 8 2 2"></path>
+                        <path d="M21 3v6c0 1.1-.9 2-2 2h-4"></path>
+                        <path d="M3 3v4c0 1.1.9 2 2 2h4"></path>
+                        <path d="M3 13v8h4"></path>
+                        <path d="M18 21h-4"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Drums</h3>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-f1-lightGray">Rhythm, beats, and musical expression through drumming.</p>
+                </div>
+              </div>
+              
+              <!-- Racing Card -->
+              <div id="racing-card" class="f1-card cursor-pointer transition-all duration-300 overflow-hidden hobby-card" data-hobby-id="racing">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1617526738882-1ea945ce3e56?q=80&w=2035" 
+                    alt="Racing" 
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 flex items-center">
+                    <div class="bg-f1-red p-2 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.3 1 12.1 1 13v3c0 .6.4 1 1 1h2"></path>
+                        <circle cx="6.5" cy="17.5" r="2.5"></circle>
+                        <circle cx="16.5" cy="17.5" r="2.5"></circle>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Racing</h3>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-f1-lightGray">Speed, adrenaline, and the thrill of motorsports.</p>
+                </div>
+              </div>
+              
+              <!-- Archery Card -->
+              <div id="archery-card" class="f1-card cursor-pointer transition-all duration-300 overflow-hidden hobby-card" data-hobby-id="archery">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1547347268-4bbbecd21366?q=80&w=2070" 
+                    alt="Archery" 
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 flex items-center">
+                    <div class="bg-f1-red p-2 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Archery</h3>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-f1-lightGray">Focus, precision, and the art of hitting targets.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Hobby Details -->
+            <div id="drums-content" class="hobby-content animate-fade-in">
+              <div class="relative h-64 md:h-96 overflow-hidden rounded-t-md">
+                <img src="https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?q=80&w=2070" alt="Drums" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 class="text-3xl md:text-4xl font-bold text-white">Drums</h2>
+                  <div class="h-1 w-16 bg-f1-red mt-4"></div>
+                </div>
+              </div>
+              <div class="bg-f1-darkGray p-8 rounded-b-md">
+                <div class="space-y-6 text-f1-lightGray">
+                  <p>
+                    My passion for drums started at a young age. The rhythmic patterns and the ability to create beats that move people have always fascinated me. Just like the precise timing in Formula 1, drumming requires perfect timing and coordination.
+                  </p>
+                  <p>
+                    I've been playing drums for over 10 years, practicing various styles including rock, heavy metal and Nu Metal. The discipline required to master this instrument has taught me patience and precision that I apply to all areas of my life.
+                  </p>
+                  <p>
+                    Whether it's a solo practice session or jamming with fellow musicians, I find drumming to be both exhilarating and meditative. The focus required to maintain complex rhythms clears my mind and provides a creative outlet.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Favorite Drummers</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Joey Jordison</li>
+                        <li>Lars Ulrich</li>
+                        <li>Dave Grohl</li>
+                        <li>Travis Barker</li>
+                      </ul>
+                    </div>
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Drum Equipment</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Pearl Masters Kit</li>
+                        <li>Zildjian Cymbals</li>
+                        <li>Roland Electronic Kit</li>
+                        <li>Various snares for different styles</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="racing-content" class="hobby-content animate-fade-in" style="display: none;">
+              <div class="relative h-64 md:h-96 overflow-hidden rounded-t-md">
+                <img src="https://images.unsplash.com/photo-1617526738882-1ea945ce3e56?q=80&w=2035" alt="Racing" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 class="text-3xl md:text-4xl font-bold text-white">Racing</h2>
+                  <div class="h-1 w-16 bg-f1-red mt-4"></div>
+                </div>
+              </div>
+              <div class="bg-f1-darkGray p-8 rounded-b-md">
+                <div class="space-y-6 text-f1-lightGray">
+                  <p>
+                    My love for racing goes beyond being a fan; it's a passion that drives me to understand the intricacies of motorsport. Formula 1, in particular, represents the perfect blend of technology, strategy, and human skill.
+                  </p>
+                  <p>
+                    I actively participate in sim racing competitions, which has taught me about racing lines, throttle control, and the importance of split-second decision making. The precision and focus required mirror what F1 drivers experience on track.
+                  </p>
+                  <p>
+                    Beyond virtual racing, I attend local karting events and occasionally participate in amateur racing series. The thrill of competition and the constant pursuit of improvement make racing an exhilarating hobby.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Favorite F1 Drivers</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Ayrton Senna</li>
+                        <li>Michael Schumacher</li>
+                        <li>Daniel Ricciardo</li>
+                        <li>Max Verstappen</li>
+                      </ul>
+                    </div>
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Favorite F1 Circuits</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Circuit de Spa-Francorchamps</li>
+                        <li>Monaco Circuit</li>
+                        <li>Azerbaijan Baku Circuit</li>
+                        <li>Autódromo José Carlos Pace (Interlagos)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="archery-content" class="hobby-content animate-fade-in" style="display: none;">
+              <div class="relative h-64 md:h-96 overflow-hidden rounded-t-md">
+                <img src="https://images.unsplash.com/photo-1547347268-4bbbecd21366?q=80&w=2070" alt="Archery" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-f1-black to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                  <h2 class="text-3xl md:text-4xl font-bold text-white">Archery</h2>
+                  <div class="h-1 w-16 bg-f1-red mt-4"></div>
+                </div>
+              </div>
+              <div class="bg-f1-darkGray p-8 rounded-b-md">
+                <div class="space-y-6 text-f1-lightGray">
+                  <p>
+                    Archery represents the perfect balance of physical strength and mental focus. Like the precision required in F1 engineering, archery demands attention to detail and consistency in execution.
+                  </p>
+                  <p>
+                    I picked up archery five years ago and have been practicing regularly ever since. The discipline has taught me about patience, focus, and the importance of form. Every shot is a new opportunity to improve.
+                  </p>
+                  <p>
+                    I practice both traditional and Olympic recurve styles, finding that each offers unique challenges and rewards. The meditative quality of drawing the bow and focusing on the target provides a sense of calm that counterbalances the high-energy nature of my other hobbies.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Archery Styles</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Olympic Recurve</li>
+                        <li>Traditional Longbow</li>
+                        <li>Barebow</li>
+                        <li>Field Archery</li>
+                      </ul>
+                    </div>
+                    <div class="bg-f1-black p-4 rounded-md">
+                      <h4 class="text-f1-white font-bold mb-2">Equipment</h4>
+                      <ul class="list-disc list-inside">
+                        <li>Win & Win Recurve Bow</li>
+                        <li>Carbon Arrows</li>
+                        <li>Stabilizers & Sights</li>
+                        <li>Traditional English Longbow</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-f1-black border-t border-f1-darkGray">
+      <div class="f1-container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-1">
+            <div class="text-f1-red font-bold text-2xl flex items-center mb-4">
+              <span class="text-f1-white mr-1">Jose</span>
+              CIMANES
+            </div>
+            <p class="text-f1-lightGray opacity-70 mb-4">
+              Inspired by the passion and precision of Formula 1.
+            </p>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Navigation</h3>
+            <ul class="space-y-2 text-f1-lightGray opacity-70">
+              <li><a href="index.html" class="hover:text-f1-red transition-colors">Home</a></li>
+              <li><a href="profile.html" class="hover:text-f1-red transition-colors">Profile</a></li>
+              <li><a href="hobbies.html" class="hover:text-f1-red transition-colors">Hobbies</a></li>
+              <li><a href="contact.html" class="hover:text-f1-red transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Hobbies</h3>
+            <ul class="space-y-2 text-f1-lightGray opacity-70">
+              <li><a href="hobbies.html#drums" class="hover:text-f1-red transition-colors">Drums</a></li>
+              <li><a href="hobbies.html#racing" class="hover:text-f1-red transition-colors">Racing</a></li>
+              <li><a href="hobbies.html#archery" class="hover:text-f1-red transition-colors">Archery</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Connect</h3>
+            <p class="text-f1-lightGray opacity-70 mb-4">
+              Want to get in touch? Visit the contact page.
+            </p>
+            <a href="contact.html" class="f1-button">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-f1-darkGray mt-12 pt-6 text-center text-f1-lightGray opacity-50">
+          <p>© <script>document.write(new Date().getFullYear())</script> Jose Jamiel R. Cimanes. All rights reserved.</p>
+          <p class="mt-1 text-sm">This website is inspired by the F1 design language.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

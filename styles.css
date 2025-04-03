@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+me-pic {
+  background-image: url("me.jpg")
+}
+
 html {
   scroll-behavior: smooth;
 }

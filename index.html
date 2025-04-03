@@ -1,1 +1,204 @@
-Welcome to my world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jose Jamiel R. Cimanes</title>
+    <meta name="description" content="Personal website of Jose Jamiel R. Cimanes" />
+    <meta name="author" content="Jose Jamiel R. Cimanes" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-f1-black text-f1-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-f1-black border-b border-f1-darkGray z-50">
+      <div class="f1-container py-4">
+        <div class="flex justify-between items-center">
+          <a href="index.html" class="text-f1-red font-bold text-2xl flex items-center">
+            <span class="text-f1-white mr-1">Jose</span>
+            CIMANES
+          </a>
+          
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="hobbies.html" class="nav-link">Hobbies</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+          
+          <div class="md:hidden">
+            <button class="text-f1-white p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen">
+      <!-- Hero Section -->
+      <section class="relative min-h-[90vh] flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-f1-black via-f1-black/95 to-f1-black/80 z-10"></div>
+        <div 
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url('https://images.unsplash.com/photo-1526355433171-69881fde9947?q=80&w=2070'); background-position: center 30%;"
+        ></div>
+        <div class="f1-container relative z-20">
+          <div class="max-w-3xl">
+            <div class="animate-slide-in-left delay-100">
+              <h1 class="f1-header mb-6">
+                DRIVEN BY <span class="text-f1-white">PASSION</span>
+              </h1>
+              <div class="h-1 w-24 bg-f1-red mb-8 animate-reveal origin-left"></div>
+              <p class="text-lg md:text-xl text-f1-lightGray mb-8 max-w-2xl animate-slide-in-left delay-200">
+                Welcome to my F1-inspired personal website. Explore my profile, hobbies, and more.
+                Built with precision and attention to detail, just like Formula 1.
+              </p>
+              <div class="flex flex-wrap gap-4 animate-slide-in-left delay-300">
+                <a href="profile.html" class="f1-button">
+                  View Profile 
+                  <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a 
+                  href="hobbies.html" 
+                  class="bg-transparent border-2 border-f1-red text-f1-white hover:bg-f1-red py-2 px-6 rounded-md transition-all duration-300 font-bold tracking-wide inline-flex items-center"
+                >
+                  Explore Hobbies
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Links Section -->
+      <section class="bg-f1-darkGray py-16">
+        <div class="f1-container">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="f1-card p-8 hover:translate-y-[-5px]">
+              <div class="h-1 w-16 bg-f1-red mb-4"></div>
+              <h3 class="text-2xl font-bold text-f1-white mb-4">Profile</h3>
+              <p class="mb-6 text-f1-lightGray">
+                Learn more about Jose Jamiel R. Cimanes and his background.
+              </p>
+              <a href="profile.html" class="text-f1-red hover:text-f1-white transition-colors font-bold inline-flex items-center">
+                Discover More 
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="f1-card p-8 hover:translate-y-[-5px]">
+              <div class="h-1 w-16 bg-f1-red mb-4"></div>
+              <h3 class="text-2xl font-bold text-f1-white mb-4">Hobbies</h3>
+              <p class="mb-6 text-f1-lightGray">
+                Explore my passions including drums, racing, and archery.
+              </p>
+              <a href="hobbies.html" class="text-f1-red hover:text-f1-white transition-colors font-bold inline-flex items-center">
+                Discover More 
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="f1-card p-8 hover:translate-y-[-5px]">
+              <div class="h-1 w-16 bg-f1-red mb-4"></div>
+              <h3 class="text-2xl font-bold text-f1-white mb-4">Contact</h3>
+              <p class="mb-6 text-f1-lightGray">
+                Get in touch with me for collaborations or discussions.
+              </p>
+              <a href="contact.html" class="text-f1-red hover:text-f1-white transition-colors font-bold inline-flex items-center">
+                Discover More 
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-f1-black py-20">
+        <div class="f1-container">
+          <div class="text-center max-w-3xl mx-auto">
+            <h2 class="f1-subheader mb-6">READY TO <span class="text-f1-red">CONNECT?</span></h2>
+            <p class="text-f1-lightGray mb-8 text-lg">
+              Reach out to discuss collaboration opportunities or just to say hello.
+            </p>
+            <a href="contact.html" class="f1-button inline-flex items-center">
+              Contact Me 
+              <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-f1-black border-t border-f1-darkGray">
+      <div class="f1-container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-1">
+            <div class="text-f1-red font-bold text-2xl flex items-center mb-4">
+              <span class="text-f1-white mr-1">Jose</span>
+              CIMANES
+            </div>
+            <p class="text-f1-lightGray opacity-70 mb-4">
+              Inspired by the passion and precision of Formula 1.
+            </p>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Navigation</h3>
+            <ul class="space-y-2 text-f1-lightGray opacity-70">
+              <li><a href="index.html" class="hover:text-f1-red transition-colors">Home</a></li>
+              <li><a href="profile.html" class="hover:text-f1-red transition-colors">Profile</a></li>
+              <li><a href="hobbies.html" class="hover:text-f1-red transition-colors">Hobbies</a></li>
+              <li><a href="contact.html" class="hover:text-f1-red transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Hobbies</h3>
+            <ul class="space-y-2 text-f1-lightGray opacity-70">
+              <li><a href="hobbies.html#drums" class="hover:text-f1-red transition-colors">Drums</a></li>
+              <li><a href="hobbies.html#racing" class="hover:text-f1-red transition-colors">Racing</a></li>
+              <li><a href="hobbies.html#archery" class="hover:text-f1-red transition-colors">Archery</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-1">
+            <h3 class="text-f1-white font-bold text-lg mb-4 uppercase">Connect</h3>
+            <p class="text-f1-lightGray opacity-70 mb-4">
+              Want to get in touch? Visit the contact page.
+            </p>
+            <a href="contact.html" class="f1-button">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-f1-darkGray mt-12 pt-6 text-center text-f1-lightGray opacity-50">
+          <p>© <script>document.write(new Date().getFullYear())</script> Jose Jamiel R. Cimanes. All rights reserved.</p>
+          <p class="mt-1 text-sm">This website is inspired by the F1 design language.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

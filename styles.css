@@ -21,6 +21,10 @@ me-pic {
   background-image: url("me.jpg")
 }
 
+archer-pic {
+  background-image: url("archer.jpg")
+}
+
 html {
   scroll-behavior: smooth;
 }
